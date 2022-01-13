@@ -17,7 +17,10 @@
                 </li>
             </ul>
             <a href="{{ route('login') }}">
-                <button class="btn btn-outline-secondary" type="button" >Login/Register</button>
+                <button class="btn btn-outline-secondary" type="button" >Login</button>
+            </a>
+            <a href="{{ route('register') }}">
+                <button class="btn btn-outline-secondary ms-2" type="button" >Register</button>
             </a>
         </div>
     </div>
