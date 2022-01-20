@@ -11,12 +11,12 @@
         <div class="row">
             <div class="col-12 col-lg-12">
                 <h1>
-                    Hello!
+                    HELLO, WEDZERIAN!
                 </h1>
                 <p>
                     Selamat datang di Wedding Organizer terpecaya anda!
                 </p>
-                <a class="btn btn-primary" href="{{ route('login') }}" role="button">Yuk, Join!</a>
+                <a class="btn btn-primary" href="{{ route('package') }}" role="button">Yuk, Join!</a>
             </div>
         </div>
         

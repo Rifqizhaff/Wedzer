@@ -1,13 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid" style="margin-top: 100px; margin-bottom: 50px; position: relative; padding: 100px; padding-right: 200px; padding-left: 200px;"">
+<div class="container-fluid" style="margin-top: 50px; margin-bottom: 50px; position: relative; padding: 100px; padding-right: 200px; padding-left: 200px;"">
     <div class="row">
         <div class="col-lg-12 col-12">
-            <h2 style="align-items: center; text-align: center; font-family: 'Inter'; font-weight: 700; margin-bottom: 50px">
-                - Wedzer (Wedding Organizer) -
+            <h2 style="align-items: center; text-align: center; font-family: 'Fleur De Leah', cursive; font-weight: 500; font-size: 124px;">
+                Wedzer
                 
             </h2>
+            <h4 style="align-items: center; text-align: center; font-family: 'Inter'; font-weight: 300; font-size: 18px; margin-bottom: 50px">
+                - Wedding Organizer -
+            </h4>
         </div>
         <div class="col-lg-12 col-12">
             <h5 style="font-size: 18px; align-items: center; text-align: center; font-family: 'Inter'; font-weight: 300;">

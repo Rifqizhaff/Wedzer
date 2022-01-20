@@ -24,9 +24,14 @@ Route::get('/', 'App\Http\Controllers\HomeController@index')
 
 // Route::get('/', 'HomeController@index');
 
-Route::get('/package', function () {
-    return view('pages.package');
-})->name('package');
+Route::resource('pages.package', 'App\Http\Controllers\Admin\InsertPackagesController');
+
+// Route::get('/package', function () {
+//     return view('pages.package');
+// })->name('package');
+
+Route::get('/package', 'App\Http\Controllers\PackageController@index')
+        ->name('package');
 
 Route::get('/about', function () {
     return view('pages.about');
@@ -46,18 +51,16 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 
-// Route::get('/admin/test', function () {
-//     return view('pages.admin.dashboard');
-// })->name('dashboard1');
-
-// Route::get('/admindash', 'App\Http\Controllers\Admin\DashboardController@index')
-//     ->name('deash');
-
 Route::prefix('admin')
     ->middleware(['auth','admin'])
     ->group(function() {
         Route::get('/', 'App\Http\Controllers\Admin\DashboardController@index')
             ->name('dashboard');
+        
+        Route::resource('packages', 'App\Http\Controllers\Admin\InsertPackagesController');
+        
+        Route::get('/insert-packages', 'App\Http\Controllers\Admin\InsertPackagesController@index')
+            ->name('InsertPackages');
     });
 
 // Route::prefix('admin')
@@ -68,9 +71,6 @@ Route::prefix('admin')
         
 //     });
 
-
-// Route::get('/registered', [RegisterController::class, 'index']);
-// Route::post('/registered', [RegisterController::class, 'store']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

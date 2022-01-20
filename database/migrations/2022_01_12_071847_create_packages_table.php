@@ -18,7 +18,6 @@ class CreatePackagesTable extends Migration
             $table->string('name');
             $table->text('image');
             $table->integer('category');
-            $table->longText('description');
             $table->integer('price');
             $table->timestamps();
         });

@@ -10,7 +10,17 @@
 <body>
 
     <!-- Navbar -->
-    @include('includes.navbar')
+    <!-- @include('includes.navbar') -->
+    @if(Auth::user() && Auth::user()->roles == 'ADMIN')
+        @include('includes.admin.navbar')
+
+    @elseif(Auth::user() && Auth::user()->roles == 'USER')
+        @include('includes.customer.navbar')
+    
+    @else
+        @include('includes.navbar')
+
+    @endif
 
     <!-- Content -->
     @yield('content')
